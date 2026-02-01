@@ -1,0 +1,28 @@
+[tools]
+lefthook = "latest"
+markdownlint-cli2 = "latest"
+
+[tasks.setup]
+description = "Setup tools"
+run = ["lefthook install"]
+alias = "s"
+
+[tasks.check]
+description = "Check"
+run = [{ task = "check-md" }]
+alias = "c"
+
+[tasks.fix]
+description = "Fix"
+run = [{ task = "fix-md" }]
+alias = "f"
+
+[tasks.check-md]
+description = "Check markdown"
+run = ["markdownlint-cli2 '**/*.md'"]
+alias = "cm"
+
+[tasks.fix-md]
+description = "Fix markdown"
+run = ["markdownlint-cli2 '**/*.md' --fix"]
+alias = "fm"

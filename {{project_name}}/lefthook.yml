@@ -1,0 +1,9 @@
+# See: https://lefthook.dev/configuration/
+
+pre-commit:
+  jobs:
+    - name: Fix
+      run: mise fix
+
+    - name: Check
+      run: mise check
