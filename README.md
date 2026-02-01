@@ -43,3 +43,9 @@
     ```sh
     mise check
     ```
+
+### Sync template updates
+
+```sh
+copier update
+```
