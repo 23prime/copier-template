@@ -12,6 +12,11 @@ license:
     - Apache-2.0
     - GPL-3.0
 
+copyright_year:
+  type: str
+  default: "{{ copyright_year | default('%Y' | strftime) }}"
+  when: false
+
 _exclude:
   - copier.yml
   - .git
